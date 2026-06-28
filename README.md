@@ -87,3 +87,55 @@ server/
         console.log(`Server is listening on port ${PORT}`)
     });
 ```
+
+## Client:
+>### Paso 1: 
+Abre una nueva terminal en la raíz del proyecto (fuera de la carpeta server) y crea la aplicación de React utilizando Vite. Cuando te lo pida, selecciona React y JavaScript:
+```bash
+npm create vite@latest client
+```
+
+>### Paso 2:
+Dirigete a la nueva carpeta del cliente:
+```bash
+cd client
+```
+
+>### Paso 3:
+Instala las dependencias base del proyecto:
+```bash
+npm install
+```
+
+>### Paso 4:
+Instala axios, que será la herramienta utilizada para realizar las peticiones HTTP desde el frontend hacia nuestro servidor backend:
+```bash
+npm i axios
+```
+
+>### Paso 5: 
+Confirmamos que la estructura principal de la carpeta quede organizada de la siguiente manera, manteniendo los archivos de configuración y diseños base de Vite listos para nuestra primera prueba:
+```text
+client/
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   │   ├── hero.png
+│   │   ├── react.svg
+│   │   └── vite.svg
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json     
+└── vite.config.js
+```
+>### Paso 6: 
+Levanta el entorno de desarrollo del frontend para confirmar que la aplicación base de Vite se ejecuta correctamente:
+```bash
+npm run dev
+```
