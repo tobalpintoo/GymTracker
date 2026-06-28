@@ -8,7 +8,7 @@ GYMTRACKER/
 ├── client/     # Frontend (React + Vite)
 ├── server/     # Backend (Node.js + Express)
 └── README.md   # Documentación principal
-
+```
 ## Tecnologias utilizadas (Stack PERN)
 * **PostreSQL**: Base de datos relacional para el almacenamiento persistente.
 * **Express**: Framework para la gestion de rutas y logica del servidor.
