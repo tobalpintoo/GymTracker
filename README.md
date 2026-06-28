@@ -3,6 +3,7 @@
 Aplicacion web integral diseñada para el seguimiento y gestión de actividades físicas y entrenamiento personal.
 
 ## Estructura del proyecto
+```text
 GYMTRACKER/
 ├── client/     # Frontend (React + Vite)
 ├── server/     # Backend (Node.js + Express)
