@@ -23,7 +23,7 @@ Sigue las siguientes indicaciones para una correcta instalacion de herramientas.
 >### Paso 1: 
 Comenzaras clonando el proyecto hacia tu directorio
 ```bash
-git clone ...
+git clone https://github.com/tobalpintoo/GymTracker.git
 ```
 >### Paso 2:
 Abriremos la carpeta server (backend)
