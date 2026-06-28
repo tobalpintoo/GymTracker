@@ -9,132 +9,82 @@ GYMTRACKER/
 ├── server/     # Backend (Node.js + Express)
 └── README.md   # Documentación principal
 ```
-## Tecnologias utilizadas (Stack PERN)
+## Tecnologías utilizadas (Stack PERN)
 * **PostgreSQL**: Base de datos relacional para el almacenamiento persistente.
 * **Express**: Framework para la gestion de rutas y logica del servidor.
 * **React**: Biblioteca de UI para una interfaz dinamica y moderna.
 * **Node.js**: Entorno de ejecucion para el servidor. 
 
-## Ejecucion de proyecto
+## Ejecución del proyecto
 Sigue las siguientes indicaciones para una correcta instalacion de herramientas.
 
 ## Server:
 
 >### Paso 1: 
-Comenzaras dirigiendote a la carpeta /server
-```text
-cd server
+Comenzaras clonando el proyecto hacia tu directorio
+```bash
+git clone ...
 ```
 >### Paso 2:
-Iniciaremos el proyecto con npm
-```text
-npm init -y
+Abriremos la carpeta server (backend)
+```bash
+cd GymTracker/server
 ```
 >### Paso 3:
 Instalamos dependencias
-```text
-npm i express nodemon pg cors
+```bash
+npm install
 ```
 >### Paso 4:
-Modificamos scripts de package.json 
-```json
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
-  }
+Levantamos el servidor
+```bash
+npm run dev
 ```
->### Paso 5:
-Modificamos type de package.json para poder exportar e importar
-```json
-  "type": "module"
-```
->### Paso 6:
-Confirmamos que quede estructurado tal que asi: 
-```text
-server/
-├──node_modules/     
-├──package.json     
-└──package-lock.json   
-```
->### Paso 7: 
-En la misma carpeta server procedemos a crear index.js 
-el cual estara encargado de: Importacion de modulos esenciales, iniciar la aplicacion, configurar los middlewares, vincular rutas y levantar el servidor
-```text
-server/
-├──node_modules/     
-├──package.json     
-├──package-lock.json
-└──index.js
-```
+>### Paso 5: 
+index.js estara encargado de: Importacion de modulos esenciales, iniciar la aplicacion, configurar los middlewares, vincular rutas y levantar el servidor
+
 ```js
-    //IMPORTACIONES
+    // IMPORTACIONES
     import express from "express";
 
 
-    //INICIALIZACION
+    // INICIALIZACIÓN
     const app = express();
     const PORT = 3000;
 
 
-    //Ruta de prueba
+    // RUTAS
     app.get("/", (req, res) => {
         res.send("Hello world!")
     });
 
 
-    //Encendido del servidor
+    // INICIO DEL SERVIDOR
     app.listen(PORT, () => {
         console.log(`Server is listening on port ${PORT}`)
     });
 ```
-
+## Endpoint de prueba:
+Para comprobar que el servidor está corriendo correctamente, puedes realizar una prueba sencilla:
+* **Backend Base URL: http://localhost:3000**
+* **Endpoint de prueba: GET /**
+* **Respuesta esperada: "Hello world!"**
+Puedes probarlo abriendo la URL anterior en tu navegador o utilizando extensiones como **Thunder Client** (en VS Code) o **Postman**.
+  
 ## Client:
 >### Paso 1: 
-Abre una nueva terminal en la raíz del proyecto (fuera de la carpeta server) y crea la aplicación de React utilizando Vite. Cuando te lo pida, selecciona React y JavaScript:
+Abriremos la carpeta client (frontend)
 ```bash
-npm create vite@latest client
+cd GymTracker/client
 ```
 
 >### Paso 2:
-Dirigete a la nueva carpeta del cliente:
-```bash
-cd client
-```
-
->### Paso 3:
 Instala las dependencias base del proyecto:
 ```bash
 npm install
 ```
 
->### Paso 4:
-Instala axios, que será la herramienta utilizada para realizar las peticiones HTTP desde el frontend hacia nuestro servidor backend:
-```bash
-npm i axios
-```
-
->### Paso 5: 
-Confirmamos que la estructura principal de la carpeta quede organizada de la siguiente manera, manteniendo los archivos de configuración y diseños base de Vite listos para nuestra primera prueba:
-```text
-client/
-├── node_modules/
-├── public/
-├── src/
-│   ├── assets/
-│   │   ├── hero.png
-│   │   ├── react.svg
-│   │   └── vite.svg
-│   ├── App.css
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package.json     
-└── vite.config.js
-```
->### Paso 6: 
+>### Paso 3:
 Levanta el entorno de desarrollo del frontend para confirmar que la aplicación base de Vite se ejecuta correctamente:
 ```bash
 npm run dev

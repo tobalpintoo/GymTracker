@@ -9,14 +9,14 @@ const PORT = 3000;
 
 
 
-//Ruta de prueba
+//RUTAS
 app.get("/", (req, res) => {
     res.send("Hello world!")
 });
 
 
 
-//Encendido del servidor
+//INICIO DEL SERVIDOR
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`)
 });
