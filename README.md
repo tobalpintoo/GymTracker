@@ -38,7 +38,7 @@ npm i express nodemon pg cors
 ```
 >### Paso 4:
 Modificamos scripts de package.json 
-```text
+```json
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
@@ -46,7 +46,7 @@ Modificamos scripts de package.json
 ```
 >### Paso 5:
 Modificamos type de package.json para poder exportar e importar
-```text
+```json
   "type": "module"
 ```
 >### Paso 6:
@@ -67,7 +67,7 @@ server/
 ├──package-lock.json
 └──index.js
 ```
-```javascript
+```js
     //IMPORTACIONES
     import express from "express";
 
