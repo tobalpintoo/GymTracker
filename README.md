@@ -9,7 +9,6 @@ GYMTRACKER/
 ├── server/     # Backend (Node.js + Express)
 └── README.md   # Documentación principal
 ```
-
 ## Tecnologias utilizadas (Stack PERN)
 * **PostgreSQL**: Base de datos relacional para el almacenamiento persistente.
 * **Express**: Framework para la gestion de rutas y logica del servidor.
