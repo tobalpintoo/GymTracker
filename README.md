@@ -64,6 +64,30 @@ index.js estara encargado de: Importacion de modulos esenciales, iniciar la apli
         console.log(`Server is listening on port ${PORT}`)
     });
 ```
+## 1. Nombre de la Base de Datos
+* **Nombre:** `gymtracker`
+
+## 2. Cómo ejecutar el archivo SQL
+Para configurar la base de datos y la tabla, sigue estos pasos:
+
+1. **Requisitos:** Asegúrate de tener instalado PostgreSQL o un sistema compatible.
+2. **Creación:** Abre tu cliente SQL (como pgAdmin, DBeaver o la terminal `psql`).
+3. **Ejecución:** 
+   - **Opción A (Terminal):** Ejecuta el siguiente comando desde la carpeta donde se encuentra el archivo:
+     ```bash
+     psql -d gymtracker -f schema.sql
+     ```
+   - **Opción B (Interfaz Gráfica):** Abre el archivo `.sql` en tu gestor, selecciona la base de datos de destino y presiona el botón de "Ejecutar" o "Ejecutar Query".
+  
+## 3. ¿Qué representa la tabla `exercises`?
+La tabla `exercises` permite registrar los movimientos físicos dentro de la plataforma de entrenamiento. Su estructura permite organizar las rutinas de manera eficiente:
+
+* **id:** Clave primaria única que identifica cada registro.
+* **name:** Nombre del ejercicio (debe ser único).
+* **muscle_group:** Clasificación del grupo muscular enfocado (ej. Pecho, Espalda, Piernas).
+* **description:** Breve descripción técnica de la ejecución.
+* **date_creation:** Timestamp que registra automáticamente la fecha y hora de creación de cada ejercicio.
+
 ## Endpoint de prueba:
 Para comprobar que el servidor está corriendo correctamente, puedes realizar una prueba sencilla:
 * **Backend Base URL: http://localhost:3000**
