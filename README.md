@@ -86,7 +86,7 @@ La tabla `exercises` permite registrar los movimientos físicos dentro de la pla
 * **name:** Nombre del ejercicio (debe ser único).
 * **muscle_group:** Clasificación del grupo muscular enfocado (ej. Pecho, Espalda, Piernas).
 * **description:** Breve descripción técnica de la ejecución.
-* **date_creation:** Timestamp que registra automáticamente la fecha y hora de creación de cada ejercicio.
+* **create_at:** Timestamp que registra automáticamente la fecha y hora de creación de cada ejercicio.
 
 ## Endpoint de prueba:
 Para comprobar que el servidor está corriendo correctamente, puedes realizar una prueba sencilla:
