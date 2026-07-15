@@ -26,7 +26,7 @@ Comenzaras clonando el proyecto hacia tu directorio
 git clone https://github.com/tobalpintoo/GymTracker.git
 ```
 >### Paso 2:
-Abriremos la carpeta server (backend)
+Abriremos la carpeta del proyecto junto al server (backend)
 ```bash
 cd GymTracker/server
 ```
@@ -40,44 +40,38 @@ Levantamos el servidor
 ```bash
 npm run dev
 ```
->### Paso 5: 
-index.js estara encargado de: Importacion de modulos esenciales, iniciar la aplicacion, configurar los middlewares, vincular rutas y levantar el servidor
+El archivo server/index.js se encarga de inicializar Express, definir las rutas base y levantar el servidor en el puerto configurado.
 
-```js
-    // IMPORTACIONES
-    import express from "express";
-
-
-    // INICIALIZACIÓN
-    const app = express();
-    const PORT = 3000;
-
-
-    // RUTAS
-    app.get("/", (req, res) => {
-        res.send("Hello world!")
-    });
-
-
-    // INICIO DEL SERVIDOR
-    app.listen(PORT, () => {
-        console.log(`Server is listening on port ${PORT}`)
-    });
-```
 ## 1. Nombre de la Base de Datos
 * **Nombre:** `gymtracker`
 
-## 2. Cómo ejecutar el archivo SQL
-Para configurar la base de datos y la tabla, sigue estos pasos:
+## 2. Cómo configurar la base de datos
+Para configurar la base de datos del proyecto, primero debes crear una base de datos llamada 'gymtracker':
 
-1. **Requisitos:** Asegúrate de tener instalado PostgreSQL o un sistema compatible.
-2. **Creación:** Abre tu cliente SQL (como pgAdmin, DBeaver o la terminal `psql`).
-3. **Ejecución:** 
-   - **Opción A (Terminal):** Ejecuta el siguiente comando desde la carpeta donde se encuentra el archivo:
-     ```bash
-     psql -d gymtracker -f schema.sql
-     ```
-   - **Opción B (Interfaz Gráfica):** Abre el archivo `.sql` en tu gestor, selecciona la base de datos de destino y presiona el botón de "Ejecutar" o "Ejecutar Query".
+### Opcion A: Usando terminal
+desde la raiz del proyecto ejecuta: 
+
+```bash
+createdb gymtracker
+```
+
+Luego ejecuta el archivo de estructura de la base de datos:
+
+```bash
+psql -d gymtracker -f server/database/schema.sql
+```
+
+Finalmente, carga los datos de prueba:
+
+```bash
+psql -d gymtracker -f server/database/seed.sql
+```
+
+### Opcion B: usando pgAdmin o DBeaver
+
+1. **Crea manualmente la base de datos llamada gymtracker**
+2. **Abre el archivo server/database/schema.sql y ejecútalo sobre la base de datos gymtracker.**
+3. **Abre el archivo server/database/seed.sql y ejecútalo sobre la misma base de datos.**
   
 ## 3. ¿Qué representa la tabla `exercises`?
 La tabla `exercises` permite registrar los movimientos físicos dentro de la plataforma de entrenamiento. Su estructura permite organizar las rutinas de manera eficiente:
@@ -97,19 +91,22 @@ Puedes probarlo abriendo la URL anterior en tu navegador o utilizando extensione
   
 ## Client:
 >### Paso 1: 
-Abriremos la carpeta client (frontend)
+Abre una nueva terminal desde la raíz del proyecto y entra a la carpeta del frontend:
+
 ```bash
-cd GymTracker/client
+cd client
 ```
 
 >### Paso 2:
-Instala las dependencias base del proyecto:
+Instala las dependencias:
 ```bash
 npm install
 ```
 
 >### Paso 3:
-Levanta el entorno de desarrollo del frontend para confirmar que la aplicación base de Vite se ejecuta correctamente:
+Levanta el entorno de desarrollo:
 ```bash
 npm run dev
 ```
+
+Por defecto, Vite mostrará en la terminal la URL local donde se está ejecutando la aplicación.
