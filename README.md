@@ -1,6 +1,6 @@
-# GYMTRACKER - Sistema de Gestion de Entrenamiento
+# GYMTRACKER - Sistema de Gestión de Entrenamiento
 
-Aplicacion web integral diseñada para el seguimiento y gestión de actividades físicas y entrenamiento personal.
+Aplicación web integral diseñada para el seguimiento y la gestión de actividades físicas y entrenamiento personal.
 
 ## Estructura del proyecto
 ```text
